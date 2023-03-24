@@ -1,17 +1,36 @@
+import React, {useState, useEffect} from 'react'
 import './App.css';
 import Home from './Home'
 import Navbar from './Navbar';
 import SignIn from './SignIn';
-import { Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
+  const [user, setUser] = useState("")
+    
+
+  useEffect(()=> {
+    fetch('/me')
+    .then(r => r.json())
+    .then(data => {
+      if(data.error) {
+        setUser(null)
+      } else {
+      setUser(data)
+      }
+    } )
+  }, [])
+
+
   return (
     <div className="App">
-      <Navbar/>
-    <Routes>
-      <Route path="/" element={<Home/>} />
-      <Route path="/signin" element={<SignIn user={user} setUser={setUser}/>} />
-    </Routes>
+      <Router>
+        <Navbar/>
+        <Routes>
+          <Route path="/" element={<Home/>} />
+          <Route path="/login" element={<SignIn user={user} setUser={setUser}/>} />
+        </Routes>
+      </Router>
     </div>
   );
 }
