@@ -1,0 +1,109 @@
+/* Set the background color to dark gray */
+body {
+    background-color: #333333;
+  }
+  
+  /* Style the hero section with yellow text */
+  .hero-section {
+    text-align: center;
+    padding: 100px;
+    color: #ffff00;
+  }
+  
+  .hero-section h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+  
+  .hero-section p {
+    font-size: 24px;
+    margin-bottom: 40px;
+  }
+  
+  .hero-section button {
+    background-color: #ffff00;
+    border: none;
+    padding: 10px 20px;
+    font-size: 24px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  /* Style the features section with white text */
+  .features-section {
+    text-align: center;
+    padding: 100px;
+    color: #ffffff;
+  }
+  
+  .features-section h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+  
+  .feature-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .feature-card {
+    margin: 20px;
+    max-width: 300px;
+    text-align: left;
+  }
+  
+  .feature-card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .feature-card h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .feature-card p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  /* Style the testimonial section with yellow text */
+  .testimonial-section {
+    text-align: center;
+    padding: 100px;
+    color: #ffff00;
+  }
+  
+  .testimonial-section h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+  
+  .testimonial-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .testimonial-card {
+    margin: 20px;
+    max-width: 300px;
+    text-align: left;
+  }
+  
+  .testimonial-card p:first-of-type {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .testimonial-card p:last-of-type {
+    font-size: 18px;
+    font-style: italic;
+  }
+  
