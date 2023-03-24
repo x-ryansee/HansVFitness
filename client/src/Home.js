@@ -4,7 +4,7 @@ const Home = () => {
   return (
     <div>
       <div className="hero-section">
-        <h1>Track Your Workouts with My Fitness App</h1>
+        <h1>Track Your Workouts with HansVFitness</h1>
         <p>Join a community of athletes and reach your fitness goals</p>
         <button>Sign Up!</button>
       </div>
