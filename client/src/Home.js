@@ -2,9 +2,13 @@ import React from 'react';
 import './home.css'
 
 const Home = () => {
+  const heroSectionStyle = {
+    backgroundImage: 'url(https://d2wvwvig0d1mx7.cloudfront.net/data/org/23436/media/img/cache/1600x0/2771738_1600x0.jpg)'
+  };
+
   return (
     <div>
-      <div className="hero-section">
+      <div className="hero-section" style={heroSectionStyle}>
         <h1>Track Your Workouts with HansVFitness</h1>
         <p>Join a community of athletes and reach your fitness goals</p>
         <button>Sign Up!</button>
