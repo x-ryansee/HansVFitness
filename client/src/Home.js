@@ -23,11 +23,6 @@ const Home = () => {
             <p>Log your runs, rides, and other workouts with GPS tracking and analyze your performance with stats and charts.</p>
           </div>
           <div className="feature-card">
-            <img src="https://via.placeholder.com/150" alt="Connect with friends"/>
-            <h3>Connect with Friends</h3>
-            <p>Follow and support your friends and other athletes in the community with likes, comments, and kudos.</p>
-          </div>
-          <div className="feature-card">
             <img src="https://via.placeholder.com/150" alt="Join challenges"/>
             <h3>Join Challenges</h3>
             <p>Stay motivated and compete with other athletes in fun and challenging virtual events and races.</p>
