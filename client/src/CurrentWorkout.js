@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import './workout.css'
 
 const CurrentWorkout = () => {
   const [exercises, setExercises] = useState([{ name: '', sets: [{ weight: '', reps: '' }] }]);
@@ -81,11 +82,11 @@ const CurrentWorkout = () => {
     : exercises;
 
     return (
-        <div>
+        <div className="workout-form">
           <form onSubmit={handleSubmit}>
             <label>
-              Muscle Group:
-              <select value={selectedMuscleGroup} onChange={handleMuscleGroupChange}>
+              <span className="label-text">Muscle Group:</span>
+              <select value={selectedMuscleGroup} onChange={handleMuscleGroupChange} className="muscle-group-select">
                 <option value="">Select a muscle group</option>
                 {muscleGroups.map((muscleGroup) => (
                   <option key={muscleGroup.id} value={muscleGroup.name}>{muscleGroup.name}</option>
@@ -93,10 +94,10 @@ const CurrentWorkout = () => {
               </select>
             </label>
             {filteredExercises.map((exercise, exIndex) => (
-              <div key={exIndex}>
+              <div key={exIndex} className="exercise-container">
                 <label>
-                  Exercise:
-                  <select value={exercise.name} onChange={(event) => handleExerciseChange(exIndex, event)}>
+                  <span className="label-text">Exercise:</span>
+                  <select value={exercise.name} onChange={(event) => handleExerciseChange(exIndex, event)} className="exercise-select">
                     <option value="">Select an exercise</option>
                     {exercise?.options?.map((option) => (
                     <option key={option.id} value={option.name}>{option.name}</option>
@@ -104,46 +105,49 @@ const CurrentWorkout = () => {
                   </select>
                 </label>
                 {exercise.sets.map((set, setIndex) => (
-                  <div key={setIndex}>
+                  <div key={setIndex} className="set-container">
                     <label>
-                      Weight:
+                      <span className="label-text">Weight:</span>
                       <input
                         type="text"
                         value={set.weight}
                         onChange={(event) => handleWeightChange(exIndex, setIndex, event)}
+                        className="weight-input"
                       />
                     </label>
                     <label>
-                      Reps:
+                      <span className="label-text">Reps:</span>
                       <input
                         type="text"
                         value={set.reps}
                         onChange={(event) => handleRepsChange(exIndex, setIndex, event)}
+                        className="reps-input"
                       />
                     </label>
                     {setIndex > 0 && (
-                      <button type="button" onClick={() => handleRemoveSet(exIndex, setIndex)}>
+                      <button type="button" onClick={() => handleRemoveSet(exIndex, setIndex)} className="remove-set-button">
                         -
                       </button>
                     )}
                     {setIndex === exercise.sets.length - 1 && (
-                      <button type="button" onClick={() => handleAddSet(exIndex)}>
+                      <button type="button" onClick={() => handleAddSet(exIndex)} className="add-set-button">
                         +
                       </button>
                     )}
                   </div>
                 ))}
-                <button type="button" onClick={() => handleRemoveExercise(exIndex)}>
+                <button type="button" onClick={() => handleRemoveExercise(exIndex)} className="remove-exercise-button">
                   Remove Exercise
                 </button>
               </div>
             ))}
-            <button type="button" onClick={handleAddExercise}>
+            <button type="button" onClick={handleAddExercise} className="add-exercise-button">
               Add Another Exercise
             </button>
-            <button type="submit">Submit</button>
+            <button type="submit" className="submit-button">Submit</button>
           </form>
         </div>
       );
+      
                 }
 export default CurrentWorkout
