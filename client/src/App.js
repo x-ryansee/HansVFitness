@@ -3,6 +3,7 @@ import './App.css';
 import Home from './Home'
 import Navbar from './Navbar';
 import SignIn from './SignIn';
+import CurrentWorkout from './CurrentWorkout';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home/>} />
           <Route path="/login" element={<SignIn user={user} setUser={setUser}/>} />
+          <Route path="/currentworkout" element={<CurrentWorkout />} />
         </Routes>
       </Router>
     </div>

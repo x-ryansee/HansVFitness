@@ -8,6 +8,8 @@ const Navbar = () => {
         <a href="/">Hans's Logo</a>
       </div>
       <ul className="navbar-links">
+        <li><a href="/currentworkout">Workout</a></li>
+        <li><a href="/pastworkouts">Past Workouts</a></li>
         <li><a href="/about">About</a></li>
         <li><a href="/pricing">Pricing</a></li>
         <li><a href="/login">Log In</a></li>
