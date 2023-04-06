@@ -38,6 +38,12 @@ class ExercisesController < ApplicationController
       @exercise.destroy
     end
   
+    # GET /muscle_groups
+    def muscle_groups
+      @muscle_groups = Exercise.pluck(:muscle_group).uniq
+      render json: @muscle_groups
+    end
+  
     private
       # Use callbacks to share common setup or constraints between actions.
       def set_exercise
