@@ -14,7 +14,7 @@ const CurrentWorkout = () => {
       })
       .catch((error) => {
         console.log(error);
-        alert('There was an error loading the muscle groups.');
+        alert('There was an error loading the muscle groups. ');
       });
   }, []);
 
